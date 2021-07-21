@@ -224,7 +224,8 @@ let s:default_filetypes = {
 				\ 'quote': s:double_quote_sequential},
 			\ 'python': {'trailing': '\\$',
 				\ 'quote': s:double_quote_plus + s:single_quote_plus
-					\ + s:double_quote_sequential + s:single_quote_sequential},
+					\ + s:double_quote_sequential + s:single_quote_sequential
+					\ + [["'\\s*$", "^\\s*f'"]]+ [['"\s*$', '^\s*f"']]},
 			\ 'ruby': {'trailing': '\\$',
 				\ 'quote': s:double_quote_plus + s:single_quote_plus
 					\ + s:double_quote_sequential + s:single_quote_sequential},
